@@ -1,14 +1,54 @@
 package com.example.projectboard.domain;
 
-import java.time.LocalDateTime;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
-public class ArticleComment {
+import javax.persistence.*;
+import java.util.Objects;
+
+@Getter
+@ToString(callSuper = true)
+@Table(indexes = {
+    @Index(columnList = "content"),
+    @Index(columnList = "createdAt"),
+    @Index(columnList = "createdBy")
+})
+@Entity
+public class ArticleComment extends AuditingFields {
+
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
-  private Article article; // 게시글 id
-  private String content; // 내용
 
-  private LocalDateTime createdAt; // 생성일시
-  private String createBy; // 생성자
-  private LocalDateTime modifiedAt; // 수정일시
-  private String modifiedBy; // 수정자
+  @Setter @ManyToOne(optional = false) private Article article; // 게시글 (ID) // 단방향
+  @Setter @ManyToOne(optional = false) @JoinColumn(name = "userId") private UserAccount userAccount; // 유저 정보 (ID) // 단방향
+
+  @Setter @Column(nullable = false, length = 500) private String content; // 본문
+
+
+  protected ArticleComment() {}
+
+  private ArticleComment(Article article, UserAccount userAccount, String content) {
+    this.article = article;
+    this.userAccount = userAccount;
+    this.content = content;
+  }
+
+  public static ArticleComment of(Article article, UserAccount userAccount, String content) {
+    return new ArticleComment(article, userAccount, content);
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) return true;
+    if (!(o instanceof ArticleComment that)) return false;
+    return id != null && id.equals(that.getId());
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(id);
+  }
+
 }
