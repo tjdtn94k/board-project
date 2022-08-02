@@ -16,6 +16,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 //@WebMvcTest
+@Disabled("Sorubg Data Rest 통합테스트는 불필요하므로 제외")
 @DisplayName("Data Rest - API 테스트")
 @Transactional
 @AutoConfigureMockMvc
@@ -36,8 +37,8 @@ public class DataRestTest {
     // When & Then
     mvc.perform(get("/api/articles"))
         .andExpect(status().isOk())
-        .andExpect(content().contentType(MediaType.valueOf("application/hal+json")))
-        .andDo(print());
+        .andExpect(content().contentType(MediaType.valueOf("application/hal+json")));
+        //.andDo(print());
   }
 
   @DisplayName("[api] 게시글 단건 조회")
