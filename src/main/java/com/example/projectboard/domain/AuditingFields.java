@@ -16,7 +16,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 @Getter
 @ToString
 @EntityListeners(AuditingEntityListener.class)
-@MappedSuperclass
+@MappedSuperclass // 공통 매핑 정보가 필요할 때 사용
 public abstract class AuditingFields {
   @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
   @CreatedDate
