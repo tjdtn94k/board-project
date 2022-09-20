@@ -4,22 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29a4534a-7d97-4c67-beb9-552b91e64135" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/document/project-board-erd.svg" beforeDir="false" afterPath="$PROJECT_DIR$/document/project-board-erd.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/projectboard/ProjectBoardApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/projectboard/ProjectBoardApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
-    </list>
+    <list default="true" id="29a4534a-7d97-4c67-beb9-552b91e64135" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -78,9 +63,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Record" />
         <option value="com.haulmont.jpb.JpaRepository" />
         <option value="Interface" />
+        <option value="Record" />
+        <option value="Enum" />
         <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
@@ -106,12 +92,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="feature/#16-VIEW" />
-                    <option name="lastUsedInstant" value="1659413571" />
+                    <option name="branchName" value="feature/#18-Service" />
+                    <option name="lastUsedInstant" value="1659578204" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="main" />
-                    <option name="lastUsedInstant" value="1659413289" />
+                    <option name="lastUsedInstant" value="1659577551" />
                   </RecentBranch>
                 </list>
               </option>
@@ -165,7 +151,7 @@
     <property name="project.structure.last.edited" value="Facets" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.3632184" />
-    <property name="settings.editor.selected.configurable" value="advanced.settings" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
@@ -173,6 +159,7 @@
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.example.projectboard.controller" />
+      <recent name="com.example.projectboard.service" />
       <recent name="com.example.projectboard.repository" />
     </key>
   </component>
@@ -184,20 +171,57 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.ProjectBoardApplication">
-    <configuration name="ArticleControllerTest and 3 more" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="board-project [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="board-project [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="All in project-board.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project-board.test" />
-      <option name="TEST_OBJECT" value="pattern" />
-      <patterns>
-        <pattern testClass="com.example.projectboard.controller.ArticleControllerTest" />
-        <pattern testClass="com.example.projectboard.controller.AuthControllerTest" />
-        <pattern testClass="com.example.projectboard.controller.DataRestTest" />
-        <pattern testClass="com.example.projectboard.repository.JpaRepositoryTest" />
-      </patterns>
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ArticleControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MainControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project-board.test" />
       <extension name="coverage">
         <pattern>
@@ -206,39 +230,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example.projectboard.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.example.projectboard.controller.ArticleControllerTest" />
+      <option name="MAIN_CLASS_NAME" value="com.example.projectboard.controller.MainControllerTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AuthControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="project-board.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.projectboard.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.projectboard.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.example.projectboard.controller.AuthControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AuthControllerTest.ginvenNoting_whenRequestingLoginPage_thenReturnsLoginPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="project-board.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.projectboard.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.projectboard.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.example.projectboard.controller.AuthControllerTest" />
-      <option name="METHOD_NAME" value="ginvenNoting_whenRequestingLoginPage_thenReturnsLoginPage" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -274,10 +267,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.ProjectBoardApplication" />
-        <item itemvalue="JUnit.ArticleControllerTest" />
-        <item itemvalue="JUnit.ArticleControllerTest and 3 more" />
-        <item itemvalue="JUnit.AuthControllerTest" />
-        <item itemvalue="JUnit.AuthControllerTest.ginvenNoting_whenRequestingLoginPage_thenReturnsLoginPage" />
+        <item itemvalue="Gradle.board-project [build]" />
+        <item itemvalue="Gradle.board-project [clean]" />
+        <item itemvalue="JUnit.All in project-board.test" />
+        <item itemvalue="JUnit.MainControllerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -302,7 +295,11 @@
       <workItem from="1659402105460" duration="3527000" />
       <workItem from="1659405750876" duration="14104000" />
       <workItem from="1659484254652" duration="14231000" />
-      <workItem from="1659569838692" duration="2903000" />
+      <workItem from="1659569838692" duration="10220000" />
+      <workItem from="1659656124190" duration="11587000" />
+      <workItem from="1659915473306" duration="11037000" />
+      <workItem from="1660264052328" duration="1598000" />
+      <workItem from="1660867550851" duration="6222000" />
     </task>
     <servers />
   </component>

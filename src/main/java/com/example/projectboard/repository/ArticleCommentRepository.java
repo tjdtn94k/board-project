@@ -1,7 +1,6 @@
 package com.example.projectboard.repository;
 
 import com.example.projectboard.domain.ArticleComment;
-import com.example.projectboard.domain.QArticle;
 import com.example.projectboard.domain.QArticleComment;
 import com.querydsl.core.types.dsl.DateTimeExpression;
 import com.querydsl.core.types.dsl.StringExpression;
@@ -11,19 +10,24 @@ import org.springframework.data.querydsl.binding.QuerydslBinderCustomizer;
 import org.springframework.data.querydsl.binding.QuerydslBindings;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
+import java.util.List;
+
 @RepositoryRestResource
 public interface ArticleCommentRepository extends
-    JpaRepository<ArticleComment,Long>,
+    JpaRepository<ArticleComment, Long>,
     QuerydslPredicateExecutor<ArticleComment>,
-    QuerydslBinderCustomizer<QArticleComment>// ArticleComment 필드에 대한 검색기능
-{
+    QuerydslBinderCustomizer<QArticleComment> {
+
+  List<ArticleComment> findByArticle_Id(Long articleId);
+  void deleteByIdAndUserAccount_UserId(Long articleCommentId, String userId);
+
   @Override
   default void customize(QuerydslBindings bindings, QArticleComment root) {
-    bindings.excludeUnlistedProperties(true); // 모든 필드 검색 닫기
-    bindings.including(root.content,root.createdAt,root.createdBy); // 특정 필드만 검색 필터 열기
-    bindings.bind(root.content).first(StringExpression::containsIgnoreCase); //like '%%'
-    bindings.bind(root.createdAt).first(DateTimeExpression::eq); //like '%%'
-    bindings.bind(root.createdBy).first(StringExpression::containsIgnoreCase); //like '%%'
-    //bindings.bind(root.title).first(StringExpression::likeIgnoreCase); // like ''
+    bindings.excludeUnlistedProperties(true);
+    bindings.including(root.content, root.createdAt, root.createdBy);
+    bindings.bind(root.content).first(StringExpression::containsIgnoreCase);
+    bindings.bind(root.createdAt).first(DateTimeExpression::eq);
+    bindings.bind(root.createdBy).first(StringExpression::containsIgnoreCase);
   }
+
 }
